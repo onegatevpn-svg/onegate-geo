@@ -1,0 +1,26 @@
+[
+  {
+    "name": "geosite.dat",
+    "mode": "allowlist",
+    "lists": [
+      "private",
+      "category-ru",
+      "onegate-direct",
+      "onegate-torrent",
+      "category-ads-all",
+      "microsoft",
+      "apple",
+      "steam",
+      "epicgames",
+      "riot",
+      "escapefromtarkov",
+      "twitch",
+      "pinterest",
+      "faceit",
+      "google-play",
+      "github",
+      "youtube",
+      "telegram"
+    ]
+  }
+]

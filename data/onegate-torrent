@@ -1,0 +1,39 @@
+# onegate-torrent — торрент-трекеры и файлообменники.
+# Замена категории geosite:torrent, которой нет в публичном источнике v2fly.
+#
+# ВАЖНО: блокировка по домену здесь вторична. Основную защиту узлов от
+# торрент-трафика даёт правило на сервере — protocol: bittorrent → blocked.
+# Этот список закрывает только заход на сайты трекеров.
+
+rutracker.org
+rutracker.net
+rutracker.cc
+nnmclub.to
+nnm-club.me
+nnm-club.name
+kinozal.tv
+kinozal.me
+rustorka.com
+torrent.by
+lostfilm.tv
+thepiratebay.org
+piratebay.live
+1337x.to
+1337x.st
+rarbg.to
+yts.mx
+eztv.re
+limetorrents.lol
+torrentgalaxy.to
+nyaa.si
+torlock.com
+bitsearch.to
+torrentz2.nz
+zooqle.com
+katcr.to
+solidtorrents.to
+
+# трекеры и DHT-точки входа
+keyword:opentrackr
+keyword:torrent-tracker
+keyword:announce.torrent

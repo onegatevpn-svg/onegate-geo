@@ -1,0 +1,75 @@
+# onegate-direct — всё, что обязано ходить напрямую, мимо туннеля.
+# Замена нестандартной категории geosite:whitelist из чужой сборки.
+# Формат: по умолчанию суффиксное совпадение домена.
+#   full:example.com   — только точное совпадение
+#   keyword:example    — подстрока
+#   regexp:...         — регулярное выражение
+
+# --- государственные сервисы ---
+gosuslugi.ru
+nalog.ru
+nalog.gov.ru
+pfr.gov.ru
+sfr.gov.ru
+fssp.gov.ru
+mvd.ru
+mos.ru
+gov.ru
+
+# --- банки и платежи ---
+sberbank.ru
+sber.ru
+sberbank-online.ru
+tinkoff.ru
+tbank.ru
+vtb.ru
+alfabank.ru
+raiffeisen.ru
+gazprombank.ru
+psbank.ru
+open.ru
+mkb.ru
+rshb.ru
+sovcombank.ru
+ozon.ru
+ozonbank.ru
+yoomoney.ru
+qiwi.com
+mironline.ru
+nspk.ru
+sbp.nspk.ru
+
+# --- связь и операторы ---
+mts.ru
+beeline.ru
+megafon.ru
+tele2.ru
+rt.ru
+
+# --- маркетплейсы и повседневное ---
+wildberries.ru
+dns-shop.ru
+mvideo.ru
+citilink.ru
+lenta.com
+magnit.ru
+perekrestok.ru
+vprok.ru
+samokat.ru
+sbermarket.ru
+delivery-club.ru
+
+# --- транспорт и билеты ---
+rzd.ru
+aeroflot.ru
+pobeda.aero
+s7.ru
+tutu.ru
+
+# --- медицина и страхование ---
+emias.info
+invitro.ru
+helix.ru
+sogaz.ru
+ingos.ru
+reso.ru

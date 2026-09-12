@@ -1,0 +1,10 @@
+category-ru
+onegate-direct
+onegate-torrent
+category-ads-all
+microsoft
+apple
+youtube
+telegram
+github
+steam

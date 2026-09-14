@@ -4,7 +4,7 @@
     "mode": "allowlist",
     "lists": [
       "private",
-      "category-ru",
+      "onegate-ru",
       "onegate-direct",
       "onegate-torrent",
       "category-ads-all",
@@ -20,7 +20,9 @@
       "google-play",
       "github",
       "youtube",
-      "telegram"
+      "telegram",
+      "category-public-tracker",
+      "category-media-ru-blocked"
     ]
   }
 ]

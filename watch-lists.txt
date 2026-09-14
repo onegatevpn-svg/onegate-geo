@@ -1,4 +1,4 @@
-category-ru
+onegate-ru
 onegate-direct
 onegate-torrent
 category-ads-all
@@ -8,3 +8,5 @@ youtube
 telegram
 github
 steam
+category-public-tracker
+category-media-ru-blocked

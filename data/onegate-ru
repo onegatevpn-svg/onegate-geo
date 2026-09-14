@@ -1,0 +1,46 @@
+# onegate-ru — всё российское одной категорией.
+# В профиле достаточно сослаться на geosite:onegate-ru.
+#
+# Основа — category-ru из v2fly. Она уже включает tld-ru, то есть
+# ВСЮ зону .ru .su .рф .moscow .tatar целиком, плюс 46 подкатегорий:
+# банки, госуслуги, медицина, образование, ритейл, travel, операторы,
+# Яндекс, Mail.ru Group, Касперский, СДЭК, HeadHunter и прочее.
+include:category-ru
+
+# Ниже — российские сервисы, которых в category-ru нет, потому что они
+# живут на нерусских доменах (.com, .tech, .io). Именно здесь была
+# основная дыра.
+
+# банки и платежи
+include:sber
+include:tbank-ru
+
+# маркетплейсы и ритейл
+include:ozon
+include:wildberries
+include:x5
+include:magnit
+include:mvideo
+
+# соцсети и медиа
+include:vk
+include:ok
+include:dzen
+include:rutube
+include:kinopoisk
+include:okko
+
+# объявления, карты, поездки
+include:avito
+include:autoru
+include:2gis
+include:aviasales
+
+# прочее
+include:overclockers-ru
+
+# Сознательно НЕ включено:
+#
+# category-ip-geo-detect (2ip.ru, whatismyip и подобные) — если пустить их
+# напрямую, пользователь увидит свой настоящий IP и решит, что VPN не
+# работает. Пусть идут через туннель.

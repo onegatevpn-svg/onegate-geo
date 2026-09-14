@@ -1,37 +1,29 @@
 {
   "name": "OneGate VPN",
-
   "geoipurl": "https://cdn.jsdelivr.net/gh/onegatevpn-svg/onegate-geo@release/geoip.dat",
   "geositeurl": "https://cdn.jsdelivr.net/gh/onegatevpn-svg/onegate-geo@release/geosite.dat",
   "lastupdated": "__TS__",
-
   "globalproxy": true,
   "routeorder": "block-proxy-direct",
   "domainstrategy": "IPIfNonMatch",
   "fakedns": false,
-
   "remotednstype": "DoH",
   "remotednsdomain": "https://8.8.8.8/dns-query",
   "remotednsip": "8.8.8.8",
-
   "domesticdnstype": "DoH",
   "domesticdnsdomain": "https://77.88.8.8/dns-query",
   "domesticdnsip": "77.88.8.8",
-
   "dnshosts": {
     "lkfl2.nalog.ru": "213.24.64.175",
     "lknpd.nalog.ru": "213.24.64.181"
   },
-
   "blocksites": [
-    "geosite:category-ads-all",
-    "geosite:onegate-torrent"
+    "geosite:category-ads-all"
   ],
   "blockip": [],
-
   "directsites": [
     "geosite:private",
-    "geosite:category-ru",
+    "geosite:onegate-ru",
     "geosite:onegate-direct",
     "geosite:microsoft",
     "geosite:apple",
@@ -41,14 +33,16 @@
     "geosite:escapefromtarkov",
     "geosite:twitch",
     "geosite:pinterest",
-    "geosite:faceit"
+    "geosite:faceit",
+    "geosite:onegate-torrent",
+    "geosite:category-public-tracker"
   ],
   "directip": [
     "geoip:private",
     "geoip:ru"
   ],
-
   "proxysites": [
+    "geosite:category-media-ru-blocked",
     "geosite:google-play",
     "geosite:github",
     "geosite:youtube",

@@ -1,8 +1,8 @@
 {
   "name": "OneGate VPN",
 
-  "geoipurl": "https://cdn.jsdelivr.net/gh/Route1/onegate-geo@release/geoip.dat",
-  "geositeurl": "https://cdn.jsdelivr.net/gh/Route1/onegate-geo@release/geosite.dat",
+  "geoipurl": "https://cdn.jsdelivr.net/gh/onegatevpn-svg/onegate-geo@release/geoip.dat",
+  "geositeurl": "https://cdn.jsdelivr.net/gh/onegatevpn-svg/onegate-geo@release/geosite.dat",
   "lastupdated": "__TS__",
 
   "globalproxy": true,

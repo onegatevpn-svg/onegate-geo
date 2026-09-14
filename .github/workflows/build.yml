@@ -1,0 +1,166 @@
+name: build geo
+
+on:
+  schedule:
+    # каждый день в 03:00 UTC
+    - cron: "0 3 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "geoip/**"
+      - "profile.json"
+      - "build-geoip.py"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Забрать наш репозиторий
+        uses: actions/checkout@v4
+        with:
+          path: self
+
+      - name: Забрать исходники списка доменов
+        uses: actions/checkout@v4
+        with:
+          repository: v2fly/domain-list-community
+          path: dlc
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "stable"
+
+      # ---------- geosite.dat ----------
+      - name: Подложить свои категории
+        run: |
+          cp -v self/data/* dlc/data/
+          cp -v self/profile.json dlc/profile.json
+
+      - name: Собрать geosite.dat
+        working-directory: dlc
+        run: |
+          mkdir -p out
+          go run ./ --datapath=./data --datprofile=./profile.json --outputdir=./out \
+            --exportlists="$(tr '\n' ',' < ../self/watch-lists.txt | sed 's/,$//')"
+          ls -l out/
+
+      - name: Посчитать записи по категориям
+        run: |
+          : > dlc/out/counts.txt
+          while read -r cat; do
+            [ -n "$cat" ] || continue
+            f="dlc/$cat.txt"
+            [ -f "$f" ] || f="dlc/out/$cat.txt"
+            if [ -f "$f" ]; then
+              printf "%s %s\n" "$cat" "$(grep -cve '^\s*$' "$f")" >> dlc/out/counts.txt
+            else
+              printf "%s MISSING\n" "$cat" >> dlc/out/counts.txt
+            fi
+          done < self/watch-lists.txt
+          cat dlc/out/counts.txt
+
+      - name: Сверить с прошлой сборкой
+        run: |
+          # Плавающий upstream удобен, но менять базу под нами он не должен
+          # незаметно. Сравниваем количество записей в ключевых категориях
+          # с предыдущим выпуском: заметная просадка — почти наверняка поломка
+          # наверху, и публиковать такое нельзя.
+          PREV="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/release/counts.txt"
+          if ! curl -fsSL -o /tmp/prev.txt "$PREV"; then
+            echo "Прошлой сборки нет — сравнивать не с чем, пропускаю."
+            exit 0
+          fi
+          fail=0
+          while read -r cat now; do
+            was=$(awk -v c="$cat" '$1==c{print $2}' /tmp/prev.txt)
+            [ -n "$was" ] || { echo "  $cat: новая категория ($now)"; continue; }
+            if [ "$now" = "MISSING" ]; then
+              echo "  $cat: ИСЧЕЗЛА (было $was)"; fail=1; continue
+            fi
+            [ "$was" = "MISSING" ] && continue
+            # порог: падение больше чем на 20 %
+            if [ "$was" -gt 0 ] && [ $((now * 100 / was)) -lt 80 ]; then
+              echo "  $cat: $was → $now — просадка больше 20 %"; fail=1
+            else
+              echo "  $cat: $was → $now"
+            fi
+          done < dlc/out/counts.txt
+          if [ "$fail" = 1 ]; then
+            echo
+            echo "Публикация отменена. Прошлый выпуск остаётся в силе."
+            echo "Посмотри, что изменилось наверху, и либо поправь список"
+            echo "категорий, либо перезапусти вручную, если падение ожидаемо."
+            exit 1
+          fi
+
+      # ---------- geoip.dat ----------
+      - name: Скачать диапазоны РФ
+        run: |
+          mkdir -p work
+          curl -fsSL -o work/ru4.txt \
+            https://raw.githubusercontent.com/ipverse/rir-ip/master/country/ru/ipv4-aggregated.txt
+          curl -fsSL -o work/ru6.txt \
+            https://raw.githubusercontent.com/ipverse/rir-ip/master/country/ru/ipv6-aggregated.txt
+          cat work/ru4.txt work/ru6.txt > work/ru.txt
+          wc -l work/ru.txt
+
+      - name: Собрать geoip.dat
+        run: |
+          python3 self/build-geoip.py \
+            ru=work/ru.txt \
+            private=self/geoip/private-ranges.txt \
+            -o dlc/out/geoip.dat
+
+      # ---------- публикация ----------
+      - name: Проверить результат
+        run: |
+          set -e
+          for f in dlc/out/geosite.dat dlc/out/geoip.dat; do
+            test -s "$f" || { echo "ПУСТО: $f"; exit 1; }
+            printf "%-28s %8s байт\n" "$f" "$(stat -c%s "$f")"
+          done
+          # страховка от случайного раздувания: > 3 МБ почти наверняка ошибка
+          # в списке категорий, а такой файл ещё и не влезет в память ядра на iOS
+          for f in dlc/out/geosite.dat dlc/out/geoip.dat; do
+            s=$(stat -c%s "$f")
+            [ "$s" -lt 3145728 ] || { echo "СЛИШКОМ БОЛЬШОЙ: $f ($s байт)"; exit 1; }
+          done
+
+      - name: Выложить в ветку release
+        run: |
+          cd self
+          git config user.name  "geo-bot"
+          git config user.email "geo-bot@users.noreply.github.com"
+          # Ветка release ведётся с историей: каждый выпуск — отдельный коммит,
+          # поэтому откат возможен без пересборки — см. README.
+          if git ls-remote --exit-code --heads origin release >/dev/null 2>&1; then
+            git fetch origin release
+            git checkout -B release origin/release
+          else
+            git checkout --orphan release
+            git rm -rf --cached . >/dev/null 2>&1 || true
+          fi
+          find . -maxdepth 1 ! -name . ! -name .git -exec rm -rf {} +
+          cp ../dlc/out/geosite.dat ../dlc/out/geoip.dat ../dlc/out/counts.txt .
+          sha256sum geosite.dat geoip.dat > SHA256SUMS
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > BUILD
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Ничего не изменилось — новый коммит не нужен."
+            exit 0
+          fi
+          git commit -m "geo $(cat BUILD)"
+          git push origin release
+
+      - name: Сбросить кэш jsDelivr
+        run: |
+          for f in geosite.dat geoip.dat SHA256SUMS; do
+            curl -sS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@release/$f" | head -c 200
+            echo
+          done

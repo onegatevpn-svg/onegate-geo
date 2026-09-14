@@ -3,8 +3,8 @@
 Geo-базы для маршрутизации в Happ. Собираются здесь, раздаются через jsDelivr.
 
 ```
-https://cdn.jsdelivr.net/gh/Route1/onegate-geo@release/geosite.dat
-https://cdn.jsdelivr.net/gh/Route1/onegate-geo@release/geoip.dat
+https://cdn.jsdelivr.net/gh/onegatevpn-svg/onegate-geo@release/geosite.dat
+https://cdn.jsdelivr.net/gh/onegatevpn-svg/onegate-geo@release/geoip.dat
 ```
 
 ## Установка
@@ -50,7 +50,7 @@ python3 make-routing-link.py --onadd
 Откат не требует пересборки. Ветка `release` ведётся с историей, поэтому достаточно навести профиль на нужный коммит:
 
 ```
-https://cdn.jsdelivr.net/gh/Route1/onegate-geo@<хэш>/geosite.dat
+https://cdn.jsdelivr.net/gh/onegatevpn-svg/onegate-geo@<хэш>/geosite.dat
 ```
 
 ## Ограничение по размеру

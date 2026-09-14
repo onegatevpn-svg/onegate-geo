@@ -18,7 +18,7 @@ import json
 import time
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--repo", default="Route1/onegate-geo",
+ap.add_argument("--repo", default="onegatevpn-svg/onegate-geo",
                 help="GitHub-репозиторий в виде владелец/имя")
 ap.add_argument("--profile", default="routing-profile.json")
 ap.add_argument("--onadd", action="store_true")

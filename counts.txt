@@ -1,5 +1,5 @@
-category-ru 1092
-onegate-direct 52
+onegate-ru 1092
+onegate-direct 91
 onegate-torrent 30
 category-ads-all 911
 microsoft 704
@@ -8,3 +8,5 @@ youtube 178
 telegram 21
 github 62
 steam 60
+category-public-tracker 431
+category-media-ru-blocked 131

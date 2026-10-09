@@ -381,7 +381,7 @@ webkit.orgwebkitgtk.orgwebobjects.co.ukwebobjects.comweb
 cn!www.support.apple.com
 cnxp.apple.com
 cn
-…Ù
+ÎÖ
 CATEGORY-ADS-ALL1rx.io
 ads2mdn-cn.net
 ads2mdn.net
@@ -623,7 +623,6 @@ clarity.ms
 adscm.baidu.com
 adscnaa123.comcnlogs.umeng.com
 ads"cnlogs.umengcloud.com
-ads!collector.github.com
 ads#collector.xhamster.com
 ads)config.uca.cloud.unity3d.com
 adscontentabc.com!contextual.media.net
@@ -721,8 +720,6 @@ go2.global$google-analytics-cn.com
 adsgooglevads-cn.com
 adsgozendata.com)graph-fallback.instagram.com
 ads graph.instagram.com
-adsgraph.whatsapp.com
-adsgraph.whatsapp.net
 ads	growin.cngrowingio.cngrowingio.comgs.amplitude.com
 ads gs.eu.amplitude.com
 ads!guanggaoad.youku.com
@@ -1127,13 +1124,9 @@ bs.mail.ru
 adsclck.yandex.net
 adsclck.yango.com
 adsclick.rustore.ru
-ads</copilot-telemetry-service.githubusercontent.com
-ads4'copilot-telemetry.githubusercontent.com
 ads disney.my.sentry.io
 ads+error-tracking.megamarket.tech
 ads+google-analytics-suite.ozon.ru
-ads/"incoming-telemetry.thunderbird.net
-ads+incoming.telemetry.mozilla.org
 adsinformer.yandex.ru
 ads log-sdk.gifshow.com
 adslog.strm.yandex.ru
@@ -1257,20 +1250,21 @@ tarkov.com
 ,
 FACEITfaceit-cdn.net
 faceit.com
-Ù
-GITHUBatom.io!collector.github.com
-adsdependabot.com	gh.ioghcr.ioghe.com
+
+GITHUBatom.io"cafe.github.com
+	telemetry'collector.github.com
+	telemetrydependabot.com	gh.ioghcr.ioghe.com
 git.io	github.aigithub.bloggithub.career
 github.comgithub.community
-github.dev	github.iogithubapp.comgithubassets.comgithubcopilot.comgithubhackathon.comgithubnext.comgithubpreview.devgithubstatus.comgithubsupport.comgithubuniverse.comgithubusercontent.commyoctocat.comnpm.community	npmjs.com	npmjs.orgoctocaptcha.comopensource.guiderepo.newthegithubshop.com</copilot-telemetry-service.githubusercontent.com
-ads4'copilot-telemetry.githubusercontent.com
-ads0,copilotprodattachments.blob.core.windows.netgithub-api.arkoselabs.com!github-cloud.s3.amazonaws.com;7github-production-release-asset-2e65be.s3.amazonaws.com=9github-production-repository-file-5c1aeb.s3.amazonaws.com>:github-production-repository-image-32fea6.s3.amazonaws.comB>github-production-upload-manifest-file-7fdce7.s3.amazonaws.com84github-production-user-asset-6210df.s3.amazonaws.com.*productionresultssa0.blob.core.windows.net.*productionresultssa1.blob.core.windows.net/+productionresultssa10.blob.core.windows.net/+productionresultssa11.blob.core.windows.net/+productionresultssa12.blob.core.windows.net/+productionresultssa13.blob.core.windows.net/+productionresultssa14.blob.core.windows.net/+productionresultssa15.blob.core.windows.net/+productionresultssa16.blob.core.windows.net/+productionresultssa17.blob.core.windows.net/+productionresultssa18.blob.core.windows.net/+productionresultssa19.blob.core.windows.net.*productionresultssa2.blob.core.windows.net.*productionresultssa3.blob.core.windows.net.*productionresultssa4.blob.core.windows.net.*productionresultssa5.blob.core.windows.net.*productionresultssa6.blob.core.windows.net.*productionresultssa7.blob.core.windows.net.*productionresultssa8.blob.core.windows.net.*productionresultssa9.blob.core.windows.net
+github.dev	github.iogithubapp.comgithubassets.comgithubcopilot.comgithubhackathon.comgithubnext.comgithubpreview.devgithubstatus.comgithubsupport.comgithubuniverse.comgithubusercontent.commyoctocat.comnpm.community	npmjs.com	npmjs.orgoctocaptcha.comopensource.guiderepo.newthegithubshop.comB/copilot-telemetry-service.githubusercontent.com
+	telemetry:'copilot-telemetry.githubusercontent.com
+	telemetry0,copilotprodattachments.blob.core.windows.netgithub-api.arkoselabs.com!github-cloud.s3.amazonaws.com;7github-production-release-asset-2e65be.s3.amazonaws.com=9github-production-repository-file-5c1aeb.s3.amazonaws.com>:github-production-repository-image-32fea6.s3.amazonaws.comB>github-production-upload-manifest-file-7fdce7.s3.amazonaws.com84github-production-user-asset-6210df.s3.amazonaws.com.*productionresultssa0.blob.core.windows.net.*productionresultssa1.blob.core.windows.net/+productionresultssa10.blob.core.windows.net/+productionresultssa11.blob.core.windows.net/+productionresultssa12.blob.core.windows.net/+productionresultssa13.blob.core.windows.net/+productionresultssa14.blob.core.windows.net/+productionresultssa15.blob.core.windows.net/+productionresultssa16.blob.core.windows.net/+productionresultssa17.blob.core.windows.net/+productionresultssa18.blob.core.windows.net/+productionresultssa19.blob.core.windows.net.*productionresultssa2.blob.core.windows.net.*productionresultssa3.blob.core.windows.net.*productionresultssa4.blob.core.windows.net.*productionresultssa5.blob.core.windows.net.*productionresultssa6.blob.core.windows.net.*productionresultssa7.blob.core.windows.net.*productionresultssa8.blob.core.windows.net.*productionresultssa9.blob.core.windows.net
 ‰
 GOOGLE-PLAYgoogleplay.complay-fe.googleapis.com$ play-games.googleusercontent.com!play-lh.googleusercontent.complay.google.complay.googleapis.comxn--ngstr-lra8j.com(redirector.c.play.google.com
 cnE9^r+[0-9]+(---|\.)sn-(2x3|ni5|j5o)\w{5}\.googlevideo\.com$
 cnI=^r+[0-9]+(---|\.)sn-(2x3|ni5|j5o)\w{5}\.xn--ngstr-lra8j\.com$
 cn
-ìŠ
+¢‹
 	MICROSOFT1drv.com1drv.ms	21vbc.com
 cn21vbluecloud.com
 cn21vbluecloud.net
@@ -1345,7 +1339,8 @@ blazor.netblueaggrestore.com
 cnbluecloudprod.com
 cnbluehatil.combluehatnights.com	boswp.combotframework.combrazilpartneruniversity.combreakdown.me'browser.events.data.msn.cn
 ads(browser.events.data.msn.com
-adsc-msedge.netcallersbane.comcegid-cloud.cn
+adsc-msedge.net"cafe.github.com
+	telemetrycallersbane.comcegid-cloud.cn
 cncentralvalidation.com
 ch9.mscharticulator.com chinacloud-mobile.cn
 cnchinacloudapi.cn
@@ -1356,8 +1351,8 @@ clarity.ms
 adscloudapp.netcloudappsecurity.comcn.bing.com
 cncn.bing.net
 cncn.mm.bing.net
-cncodethemicrobit.com!collector.github.com
-adscopilot-stg.comcopilot.comcortanaanalytics.comcortanaskills.comcosmosdb.infocosmosdb.netcrmdynint-gcc.comcrmdynint.comcrossborderexpansion.comdcg.microsoft.com
+cncodethemicrobit.com'collector.github.com
+	telemetrycopilot-stg.comcopilot.comcortanaanalytics.comcortanaskills.comcosmosdb.infocosmosdb.netcrmdynint-gcc.comcrmdynint.comcrossborderexpansion.comdcg.microsoft.com
 cndependabot.comdevopsassessment.netdevopsms.com
 dictate.msditu.live.com
 cn(dl.delivery.mp.microsoft.com
@@ -1486,9 +1481,9 @@ yammer.com4(azuremigrate.download.prss.microsoft.com
 cn cn.windowssearch.com
 cn3'collaborate.download.prss.microsoft.com
 cn6*collaborateppe.download.prss.microsoft.com
-cn</copilot-telemetry-service.githubusercontent.com
-ads4'copilot-telemetry.githubusercontent.com
-ads#ctldl.windowsupdate.com
+cnB/copilot-telemetry-service.githubusercontent.com
+	telemetry:'copilot-telemetry.githubusercontent.com
+	telemetry#ctldl.windowsupdate.com
 cn#developer.microsoft.com
 cn"download.microsoft.com
 cn/#download.visualstudio.microsoft.com

@@ -2,11 +2,11 @@ onegate-ru 1167
 onegate-direct 91
 onegate-torrent 30
 category-ads-all 910
-microsoft 712
+microsoft 713
 apple 1661
 youtube 178
 telegram 21
 github 64
 steam 61
-category-public-tracker 431
+category-public-tracker 432
 category-media-ru-blocked 132
